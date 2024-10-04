@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Space</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .button {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .story-form, .write-to-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .story-form input, .story-form textarea, .story-form select, 
+        .write-to-form input, .write-to-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .post-container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Safe Space</h1>
+    <p>Share your thoughts, emotions, and stories anonymously or with a message to someone.</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#terms">Terms</a>
+</nav>
+
+<div class="container">
+    <button class="button" onclick="document.getElementById('storyForm').style.display='block'">Share Your Thoughts</button>
+    <button class="button" onclick="document.getElementById('writeToForm').style.display='block'">Write To</button>
+    <button class="button">Read Stories</button>
+</div>
+
+<div class="container story-form" id="storyForm" style="display:none;">
+    <h2>Share Your Thoughts</h2>
+    <form>
+        <input type="text" placeholder="Title of your story">
+        <textarea rows="5" placeholder="Write your thoughts here..."></textarea>
+        <label for="mood">Mood:</label>
+        <select id="mood">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="confused">Confused</option>
+        </select>
+        <input type="checkbox" id="showName" name="showName">
+        <label for="showName">Share your name</label>
+        <br>
+        <button class="button" type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="container write-to-form" id="writeToForm" style="display:none;">
+    <h2>Write To</h2>
+    <form>
+        <input type="text" placeholder="To (Name)">
+        <textarea rows="5" placeholder="Write your message here..."></textarea>
+        <input type="checkbox" id="showName" name="showName">
+        <label for="showName">Share your name</label>
+        <br>
+        <button class="button" type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="container">
+    <input type="text" placeholder="Search by name">
+    <h2>Recent Posts</h2>
+    <div class="post-container">
+        <h3>To: Anonymous</h3>
+        <p>I just want to say that I'm feeling down today, but sharing this helps me a little...</p>
+        <small>Mood: Sad</small>
+    </div>
+    <div class="post-container">
+        <h3>To: David</h3>
+        <p>How could you do that to me?</p>
+        <small>Mood: Angry</small>
+    </div>
+</div>
+
+<section id="about" class="container">
+    <h2>About Safe Space</h2>
+    <p>Safe Space is a platform where users can share their thoughts, emotions, and messages anonymously. It's a place to open up, connect, and express yourself freely.</p>
+</section>
+
+<section id="terms" class="container">
+    <h2>Terms of Use</h2>
+    <p>By using Safe Space, you agree to respect the community and refrain from posting harmful or inappropriate content. We reserve the right to remove any posts that violate these guidelines.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Safe Space</p>
+</footer>
+
+</body>
+</html>
